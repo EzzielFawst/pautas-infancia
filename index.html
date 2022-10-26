@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Custom Stylesheet CSS -->
+        <link rel="stylesheet" href="./style.css">
+
+        <title>Formulario de Registro</title>
+        
+    </head>
+    <body>
+        <div class="container">
+            <header><h3>Registro</h3></header>
+            <form id="form-submit" action="/data" method="POST">
+                <div class="form first">
+                    <div class="details test">
+                        <div class="fields">
+                            <div class="input-field todayDate-class">
+                                <label for="todayDate">Fecha del examen</label>
+                                <input id="todayDate" name="todayDate" type="date" placeholder="Enter birth date" oninvalid="this.setCustomValidity('Por favor, complete este dato')" oninput="setCustomValidity('')"  required>
+                            </div>
+                            <div class="input-field">
+                              <label for="birth_date">Fecha de nacimiento</label>
+                              <input name="birth_date" id="birth_date" type="date" placeholder="Enter birth date" oninvalid="this.setCustomValidity('Por favor, complete este dato')" oninput="setCustomValidity('')"  required>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="details studies">
+                        <span class="title">Pautas de desarrollo para niño/a de <span id="aliveDays">?</span> días <span id="aliveMonths"></span><span id="aliveYears"></span></span>
+                        <input name="aliveDays" id="aliveDaysInput" class="hidden" value="?">
+                        <div id="field-app" class="fields flex-column">
+                              
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <script src="./node_modules/html2pdf.js/dist/html2pdf.bundle.js"></script>
+        <script src="./script.js"></script>
+    </body>
+</html>
